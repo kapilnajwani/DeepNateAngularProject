@@ -1,0 +1,136 @@
+<mat-tab-group #tabRef >
+
+
+ <mat-tab label="Employee" class="tab" > 
+<mat-card >
+  <div class="from-group">
+    <h3 >MY EMPLOYEES</h3>
+    <div class="example-button-row">
+    <p>List of all your employee
+    <button mat-stroked-button color="primary" class="status">Employee Status
+      <mat-icon matSuffix>arrow_drop_down</mat-icon>
+    </button>
+    
+     <button mat-raised-button color="primary" class="new">  <mat-icon >add</mat-icon> New Employee
+    
+     </button>
+    </p>
+    </div> 
+  
+  
+    <mat-form-field appearance="outline" class="input" >
+      <mat-label>Search by Employee Name or Project Name or Instance Name</mat-label>
+      <mat-icon matPrefix class="search">search</mat-icon>
+       <input type="text"  class="input" matInput placeholder="Search by Employee Name or Project Name or Instance Name"> 
+       <mat-icon matSuffix  class="search">format_align_justify </mat-icon>
+       
+    </mat-form-field>
+    </div>
+  
+  
+  
+   
+  
+    
+  
+    <mat-table [dataSource]="dataSource"  matSort >
+     <!--<ng-container matColumnDef="radiobutton">
+      <mat-header-cell *matHeaderCellDef class="cell"> rahul </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="item">
+        <mat-radio-group aria-labelledby="example-radio-group-label"
+        class="example-radio-group"
+        >
+         <mat-radio-button class="example-radio-button" *ngFor="let season of " [value]="season" >
+           {{season}}
+         </mat-radio-button>
+        </mat-radio-group>
+           
+        </mat-cell>
+    
+     </ng-container>-->
+      <ng-container matColumnDef="button"  class="radio">
+      <mat-header-cell *matHeaderCellDef class="cell"></mat-header-cell>
+      
+      <mat-cell *matCellDef="let element" class="item"> 
+        <mat-radio-group>
+          <mat-radio-button value="angular" color="primary" class="button1" >  </mat-radio-button>
+         
+        </mat-radio-group>
+             </mat-cell>
+     </ng-container>
+    
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef class="cell"> Employee Name </mat-header-cell>
+      
+      <mat-cell *matCellDef="let element" class="item"> 
+       <button disableRipple mat-mini-fab class="button">LI</button>
+        {{element.name}} </mat-cell>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="address" >
+      <mat-header-cell *matHeaderCellDef class="cell"> Email Address </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="item"> {{element.address}} </mat-cell>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+   
+    <ng-container matColumnDef="project">
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="cell"> Projects
+       </mat-header-cell>
+       <mat-icon matSuffix >Backup</mat-icon>
+      <mat-cell *matCellDef="let element" class="item"> {{element.project}} </mat-cell>
+      
+     
+    </ng-container>
+  
+    <ng-container matColumnDef="running" >
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="cell"> Running </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="item"> {{element.running}} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="completed">
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="cell"> Completed </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="item"> {{element.completed}} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="amount" >
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="cell"> Bill Amount </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="amount" > {{element.amount | currency}} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="symbol" >
+      <mat-header-cell *matHeaderCellDef class="cell"> Instances </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="item"> 
+        <mat-icon class="search">launch</mat-icon>  
+      </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="notebook" >
+      <mat-header-cell *matHeaderCellDef class="cell"> Notebook </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="item">
+        <mat-icon class="search">launch</mat-icon>
+      </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+ </mat-card>
+
+
+ 
+
+
+ </mat-tab>
+
+
+
+
+
+<mat-tab label="Projects"></mat-tab>
+  <mat-tab label="Instances"></mat-tab>
+  <mat-tab label="Notebook"></mat-tab>
+</mat-tab-group>

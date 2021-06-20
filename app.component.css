@@ -1,0 +1,99 @@
+.mat-card {
+  box-shadow: 0px 0px 2px;
+  width: 88em;
+  margin: 40px 0px 30px 40px;
+  height:30em;
+  border:0px solid;
+}
+.tab {
+ font-color:blue;
+  background-color:lightskyblue !important;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  background-color: blue;
+}
+
+.example-full-width {
+  width: 100%;
+}
+table {
+  width: 100%;
+  
+}
+.from-group{
+  margin-left: 40px;
+  margin-top: 30px;
+  font-family: Roboto;
+  font-style: normal;
+}
+h3{
+  font-weight:bold;
+  text-shadow: 0 0 rgb(138, 135, 135);
+  margin-bottom: auto;
+  font-family: Roboto;
+  
+}
+
+.status{
+  margin-left: 400px;
+  font-family: Roboto;
+  font-style: normal;
+}
+.new{
+  margin-left: 30px;
+  font-family: roboto;
+  font-style: normal;
+  }
+  .cell{
+    text-shadow: 0 0 rgb(138, 135, 135);
+    font-weight: bold;
+    font-family: lato;
+    border: 1px;
+    align-items: center;
+    margin-right:20px;
+    font-style: normal;
+ }
+.search{
+    color:blue;
+  }
+  .input{
+    width:400px;
+    font-size:10px;
+  }
+  .amount{
+   color:#32CC66;
+   text-align: center;
+  }
+  .item{
+    text-align: center;
+  }
+  .mat-column-running {
+    text-align: center;
+
+  }
+  .button{
+    margin-right: 2px;
+    background-color: black;
+    width: 34px;
+    height:34px;
+    border-radius: undefinedpx;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    text-align: center;
+
+
+  }
+  .button1{
+    margin-left:80px;
+    width:30px;
+  }
+  .radio{
+    width:10px;
+  }
+  .mat-Column-button{
+    width:10px;
+  }
